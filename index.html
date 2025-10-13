@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Life in Weeks</title>
+  <meta name="description" content="Visualization of life in weeks (90 years × 52 weeks)." />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript><style>#grid, #legend { display:none !important; } .no-js-msg { display:block; }</style></noscript>
+</head>
+<body>
+  <header>
+    <h1>My Life in Weeks</h1>
+    <p id="summary" class="summary" aria-live="polite"></p>
+    <p class="no-js-msg" style="display:none">This visualization requires JavaScript to generate the weekly grid.</p>
+  </header>
+  <main id="layout">
+    <section id="grid-wrapper">
+      <div id="grid" aria-label="Life weeks grid" role="grid"></div>
+    </section>
+    <aside id="legend" aria-label="Legend"></aside>
+  </main>
+  <div id="overlay" hidden aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="overlay-backdrop" data-close="true"></div>
+    <div class="overlay-content" role="document">
+      <button class="close" aria-label="Close" data-close="true">×</button>
+      <div class="week-visual" aria-hidden="true"></div>
+      <div class="week-text">
+        <h2 class="week-title"></h2>
+        <p class="week-dates"></p>
+        <p class="week-category"></p>
+        <p class="week-description"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
